@@ -9,8 +9,9 @@ const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Talks - Conversation-Based Social Media",
-  description: "A peaceful community for meaningful conversations",
+  title: "Pooja Talks - Personal Blog on Life, Research & Discovery",
+  description:
+    "Personal blog by Pooja Patel exploring AI, LLMs, product analysis, history, spirituality, and nature. Research, writing, and insights on technology and life.",
   generator: "v0.app",
 }
 

@@ -14,11 +14,11 @@ export default function Navigation() {
 
   const navItems = [
     { href: "/", label: "HOME" },
-    { href: "/communities", label: "COMMUNITIES" },
-    { href: "/feed", label: "FEED" },
-    { href: "/create-post", label: "CREATE" },
-    { href: "/profile", label: "PROFILE" },
-    { href: "/messages", label: "MESSAGES" },
+    { href: "/topics", label: "TOPICS" },
+    { href: "/ideas", label: "IDEAS" },
+    { href: "/shop", label: "SHOP" },
+    { href: "/socials", label: "ABOUT" },
+    { href: "/support", label: "SUPPORT" },
   ]
 
   return (
@@ -27,11 +27,11 @@ export default function Navigation() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="font-bold text-2xl tracking-widest font-serif hover:opacity-70 transition-opacity">
-            POOJA's TALKS
+            POOJA TALKS
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6">
             {navItems.map((item) => (
               <Link
                 key={item.href}
