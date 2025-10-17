@@ -10,11 +10,11 @@ export default function ShopPage() {
       author: "Pooja Patel",
       description:
         "This is the story of a woman's journey to reclaim her light after enduring rejection and fear. It's about learning to accept the scars and the beauty they hold, discovering that the love she thought impossible began within herself. Along the way, she encountered someone extraordinary—a soul who refused to give up on her, who saw her worth when she couldn't. Weight of Empty Hands is a story for anyone who's ever felt lost, but dared to keep searching. It's about the courage to heal, the power of love, and the rare, precious people who help us carry the weight until we learn to let it go.",
-      price: "On Demand",
-      category: "Novel",
-      image: "📖",
+      price: "187 INR",
+      category: "Poetry",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-9PKJlWDwj3I2QdqMATRckBhxkuYDyR.png",
       available: true,
-      link: "https://buymeacoffee.com/pooja.p",
+      link: "https://www.amazon.in/Weight-empty-hands-sunflowers-spirit/dp/9369535055/ref=sr_1_1?crid=32JQD32MGO9TN&dib=eyJ2IjoiMSJ9.nmuvAm-CWqBit9y0BTlZyMp39fuYonk1zP_gLVwVuyO6NTdFKiD0FIqIaXbQ1MvSn7Oc1DRg0_8Tb8FMkHufVsaUucRGREBzq6EhTogaYTwUS73NEpQhnH3Z35V9Jvs-B8c2cdQe11PMH3pIR3fN8a7c6UI5Hc4hcZXb-5t6zzCY4N4EuJr2gLCNAeKyT23SbJWjzElOYBf8gi2XvmqJPQ.FhoxtzjPGwQZhmDS5z6gl0Vn10_qP0M3vI0XOGoI7Zs&dib_tag=se&keywords=weight+of+empty+hands&qid=1760709511&sprefix=weight+of+empty+hands%2Caps%2C258&sr=8-1",
     },
     {
       id: 2,
@@ -22,11 +22,11 @@ export default function ShopPage() {
       author: "Paige",
       description:
         "A captivating fantasy novel featuring intricate world-building and compelling characters. Shadowforged weaves together magic, mystery, and adventure in a tale that will keep you turning pages late into the night.",
-      price: "$14.99",
-      category: "Poetry & Fantasy",
-      image: "✨",
+      price: "On demand",
+      category: "Novel",
+      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-UhlvTp8hgHvbFfsiKc3S8bWuwvhT0e.png",
       available: true,
-      link: "https://www.amazon.com",
+      link: "https://buymeacoffee.com/pooja.p",
     },
   ]
 
@@ -59,9 +59,12 @@ export default function ShopPage() {
           {books.map((book) => (
             <a key={book.id} href={book.link} target="_blank" rel="noopener noreferrer" className="group">
               <div className="border-4 border-black overflow-hidden hover:shadow-xl transition-shadow h-full flex flex-col bg-white">
-                {/* Book Cover */}
-                <div className="h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center border-b-4 border-black">
-                  <div className="text-7xl">{book.image}</div>
+                <div className="h-64 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center border-b-4 border-black overflow-hidden">
+                  <img
+                    src={book.image || "/placeholder.svg"}
+                    alt={book.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform"
+                  />
                 </div>
 
                 {/* Content */}

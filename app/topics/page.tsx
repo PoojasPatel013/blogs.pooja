@@ -7,29 +7,29 @@ const mainTopics = [
   {
     slug: "life",
     name: "Life & Experiences",
-    description: "Personal reflections, life lessons, and experiences that shape who we are.",
-    icon: "✨",
+    description: "Personal reflections and experiences that shape who we are.",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/life-PZ7EaVpXCuJh2qOHQwHLkeZMxSMU9x.jpg",
     posts: 24,
   },
   {
     slug: "spirituality",
     name: "Spirituality",
-    description: "Exploring Hindu philosophy, spirituality, and ancient wisdom traditions.",
-    icon: "🙏",
+    description: "Exploring Hindu philosophy and ancient wisdom traditions.",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/spirituality-l7ORrwdI3Sfo1yzmjlhtCdnEWOB9I4.jpg",
     posts: 19,
   },
   {
     slug: "research",
     name: "Research & Analysis",
-    description: "Product analysis, market research, project management, and business insights.",
-    icon: "📊",
+    description: "Product analysis, market research, and business insights.",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/research-gApktgwnTqyXT3WKbm5lYxGSC3l78g.jpg",
     posts: 35,
   },
   {
     slug: "technology",
     name: "Technology & AI",
-    description: "AI, LLMs, product analysis, emerging tech trends, and innovation.",
-    icon: "🚀",
+    description: "AI, LLMs, product analysis, and emerging tech trends.",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/technology-jV3NuHKEtMpx4Dja6AgCaSPpyi8uYj.webp",
     posts: 42,
   },
 ]
@@ -92,27 +92,34 @@ export default function TopicsPage() {
         {/* Main Topics Grid */}
         <section className="mb-16">
           <h3 className="text-2xl font-bold mb-8 tracking-wide border-b-2 border-black pb-4">MAIN TOPICS</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {mainTopics.map((topic) => (
               <Link key={topic.slug} href={`/topics/${topic.slug}`}>
-                <div className="border-4 border-black p-6 hover:shadow-xl transition-shadow h-full flex flex-col cursor-pointer group bg-white">
-                  {/* Icon */}
-                  <div className="text-5xl mb-4">{topic.icon}</div>
-
-                  {/* Content */}
-                  <h3 className="text-xl font-bold mb-2 tracking-wide group-hover:underline">{topic.name}</h3>
-                  <p className="text-gray-700 mb-6 leading-relaxed flex-1 text-sm">{topic.description}</p>
-
-                  {/* Stats */}
-                  <div className="border-t-2 border-black pt-4 mb-4">
-                    <p className="text-sm font-mono text-gray-600">
-                      {topic.posts} BLOG POST{topic.posts !== 1 ? "S" : ""}
-                    </p>
+                <div className="border-4 border-black overflow-hidden hover:shadow-xl transition-shadow h-full flex flex-col cursor-pointer group bg-white">
+                  <div className="h-48 bg-gray-200 overflow-hidden border-b-4 border-black">
+                    <img
+                      src={topic.image || "/placeholder.svg"}
+                      alt={topic.name}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform"
+                    />
                   </div>
 
-                  <Button className="w-full bg-black text-white hover:bg-gray-800 font-mono tracking-widest text-sm">
-                    EXPLORE
-                  </Button>
+                  {/* Content */}
+                  <div className="p-6 flex-1 flex flex-col">
+                    <h3 className="text-xl font-bold mb-2 tracking-wide group-hover:underline">{topic.name}</h3>
+                    <p className="text-gray-700 mb-6 leading-relaxed flex-1 text-sm">{topic.description}</p>
+
+                    {/* Stats */}
+                    <div className="border-t-2 border-black pt-4 mb-4">
+                      <p className="text-sm font-mono text-gray-600">
+                        {topic.posts} BLOG POST{topic.posts !== 1 ? "S" : ""}
+                      </p>
+                    </div>
+
+                    <Button className="w-full bg-black text-white hover:bg-gray-800 font-mono tracking-widest text-sm">
+                      EXPLORE
+                    </Button>
+                  </div>
                 </div>
               </Link>
             ))}

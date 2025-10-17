@@ -36,101 +36,8 @@ const topicData: Record<string, any> = {
       },
     ],
   },
-  romance: {
-    name: "Romance & Relationships",
-    description:
-      "Exploring the beauty of love, connections, and human relationships. From romantic musings to relationship insights, I share thoughts on what makes connections meaningful.",
-    posts: [
-      {
-        id: 1,
-        title: "The Poetry of Everyday Love",
-        excerpt: "Finding romance in the ordinary moments of life...",
-        date: "2025-01-12",
-        hashtags: ["#romance", "#love", "#poetry"],
-        likes: 267,
-      },
-      {
-        id: 2,
-        title: "Building Deeper Connections",
-        excerpt: "How vulnerability strengthens relationships...",
-        date: "2025-01-08",
-        hashtags: ["#relationships", "#connection", "#vulnerability"],
-        likes: 198,
-      },
-    ],
-  },
-  history: {
-    name: "History & Culture",
-    description:
-      "Historical insights, cultural exploration, and archaeological discoveries. I research and share fascinating stories from human history and cultural heritage.",
-    posts: [
-      {
-        id: 1,
-        title: "Ancient Civilizations and Their Wisdom",
-        excerpt: "What we can learn from ancient cultures...",
-        date: "2025-01-14",
-        hashtags: ["#history", "#culture", "#archaeology"],
-        likes: 312,
-      },
-      {
-        id: 2,
-        title: "The Role of Women in Historical Narratives",
-        excerpt: "Uncovering hidden stories of influential women...",
-        date: "2025-01-09",
-        hashtags: ["#history", "#women", "#culture"],
-        likes: 267,
-      },
-      {
-        id: 3,
-        title: "Archaeological Discoveries of 2024",
-        excerpt: "Recent findings that reshape our understanding of history...",
-        date: "2025-01-03",
-        hashtags: ["#archaeology", "#discovery", "#history"],
-        likes: 234,
-      },
-    ],
-  },
-  technology: {
-    name: "Technology & AI",
-    description:
-      "AI, LLMs, product analysis, and emerging tech trends. I research and write about the intersection of AI, market trends, and innovation in technology.",
-    posts: [
-      {
-        id: 1,
-        title: "The Evolution of Large Language Models in 2025",
-        excerpt: "Analyzing the latest advancements in LLM technology...",
-        date: "2025-01-16",
-        hashtags: ["#AI", "#LLM", "#technology"],
-        likes: 456,
-      },
-      {
-        id: 2,
-        title: "Product Analysis: The New Wave of AI Tools",
-        excerpt: "Evaluating emerging AI products and their market impact...",
-        date: "2025-01-11",
-        hashtags: ["#productanalysis", "#AI", "#innovation"],
-        likes: 389,
-      },
-      {
-        id: 3,
-        title: "Accuracy and Ethics in AI Systems",
-        excerpt: "Exploring the challenges of building trustworthy AI...",
-        date: "2025-01-06",
-        hashtags: ["#AI", "#ethics", "#accuracy"],
-        likes: 334,
-      },
-      {
-        id: 4,
-        title: "Market Trends: Where AI is Heading",
-        excerpt: "Insights on the future direction of artificial intelligence...",
-        date: "2025-01-01",
-        hashtags: ["#AI", "#markettrends", "#research"],
-        likes: 298,
-      },
-    ],
-  },
-  hinduism: {
-    name: "Hinduism & Spirituality",
+  spirituality: {
+    name: "Spirituality",
     description:
       "Exploring Hindu philosophy, spirituality, and ancient wisdom traditions. I share insights into Hindu teachings and their relevance to modern life.",
     posts: [
@@ -149,68 +56,6 @@ const topicData: Record<string, any> = {
         date: "2025-01-07",
         hashtags: ["#hinduism", "#karma", "#dharma"],
         likes: 234,
-      },
-    ],
-  },
-  archaeology: {
-    name: "Archaeology & Geography",
-    description:
-      "Archaeological discoveries, geographical exploration, and cultural heritage. I share research on ancient sites and geographical insights.",
-    posts: [
-      {
-        id: 1,
-        title: "Hidden Civilizations: Archaeological Wonders",
-        excerpt: "Exploring lesser-known archaeological sites around the world...",
-        date: "2025-01-14",
-        hashtags: ["#archaeology", "#geography", "#discovery"],
-        likes: 267,
-      },
-      {
-        id: 2,
-        title: "Geography and Culture: How Landscape Shapes Civilization",
-        excerpt: "The relationship between geography and cultural development...",
-        date: "2025-01-09",
-        hashtags: ["#geography", "#culture", "#history"],
-        likes: 198,
-      },
-      {
-        id: 3,
-        title: "Sacred Sites: Where Spirituality Meets Geography",
-        excerpt: "Exploring the geographical significance of spiritual locations...",
-        date: "2025-01-04",
-        hashtags: ["#geography", "#spirituality", "#archaeology"],
-        likes: 156,
-      },
-    ],
-  },
-  nature: {
-    name: "Climate & Nature",
-    description:
-      "Environmental insights, climate research, and the beauty of our natural world. I share observations and research on nature and environmental topics.",
-    posts: [
-      {
-        id: 1,
-        title: "Climate Change: Understanding the Science",
-        excerpt: "Breaking down climate science for everyone...",
-        date: "2025-01-15",
-        hashtags: ["#climate", "#environment", "#science"],
-        likes: 312,
-      },
-      {
-        id: 2,
-        title: "The Beauty of Biodiversity",
-        excerpt: "Why protecting nature's diversity matters...",
-        date: "2025-01-10",
-        hashtags: ["#nature", "#biodiversity", "#conservation"],
-        likes: 267,
-      },
-      {
-        id: 3,
-        title: "Seasonal Changes and Natural Cycles",
-        excerpt: "Understanding nature's rhythms and patterns...",
-        date: "2025-01-05",
-        hashtags: ["#nature", "#seasons", "#environment"],
-        likes: 189,
       },
     ],
   },
@@ -258,6 +103,101 @@ const topicData: Record<string, any> = {
         date: "2024-12-28",
         hashtags: ["#businessintelligence", "#data", "#analysis"],
         likes: 198,
+      },
+    ],
+  },
+  technology: {
+    name: "Technology & AI",
+    description:
+      "AI, LLMs, product analysis, and emerging tech trends. I research and write about the intersection of AI, market trends, and innovation in technology.",
+    posts: [
+      {
+        id: 1,
+        title: "The Evolution of Large Language Models in 2025",
+        excerpt: "Analyzing the latest advancements in LLM technology...",
+        date: "2025-01-16",
+        hashtags: ["#AI", "#LLM", "#technology"],
+        likes: 456,
+      },
+      {
+        id: 2,
+        title: "Product Analysis: The New Wave of AI Tools",
+        excerpt: "Evaluating emerging AI products and their market impact...",
+        date: "2025-01-11",
+        hashtags: ["#productanalysis", "#AI", "#innovation"],
+        likes: 389,
+      },
+      {
+        id: 3,
+        title: "Accuracy and Ethics in AI Systems",
+        excerpt: "Exploring the challenges of building trustworthy AI...",
+        date: "2025-01-06",
+        hashtags: ["#AI", "#ethics", "#accuracy"],
+        likes: 334,
+      },
+      {
+        id: 4,
+        title: "Market Trends: Where AI is Heading",
+        excerpt: "Insights on the future direction of artificial intelligence...",
+        date: "2025-01-01",
+        hashtags: ["#AI", "#markettrends", "#research"],
+        likes: 298,
+      },
+    ],
+  },
+  culture: {
+    name: "Culture",
+    description: "Cultural exploration and heritage.",
+    posts: [
+      {
+        id: 1,
+        title: "The Role of Women in Historical Narratives",
+        excerpt: "Uncovering hidden stories of influential women...",
+        date: "2025-01-09",
+        hashtags: ["#history", "#women", "#culture"],
+        likes: 267,
+      },
+    ],
+  },
+  geography: {
+    name: "Geography",
+    description: "Geographical exploration and discoveries.",
+    posts: [
+      {
+        id: 1,
+        title: "Geography and Culture: How Landscape Shapes Civilization",
+        excerpt: "The relationship between geography and cultural development...",
+        date: "2025-01-09",
+        hashtags: ["#geography", "#culture", "#history"],
+        likes: 198,
+      },
+    ],
+  },
+  random: {
+    name: "Random Thoughts",
+    description: "Miscellaneous musings and observations.",
+    posts: [
+      {
+        id: 1,
+        title: "Thoughts on Creativity and Expression",
+        excerpt: "Random musings on the creative process...",
+        date: "2025-01-14",
+        hashtags: ["#creativity", "#thoughts", "#expression"],
+        likes: 145,
+      },
+    ],
+  },
+  academia: {
+    name: "Academia",
+    description: "Academic research and scholarly insights.",
+    posts: [
+      {
+        id: 1,
+        title: "Transforming Development Projects into Research Papers",
+        excerpt: "A comprehensive guide to academic writing and publication...",
+        date: "2025-01-17",
+        hashtags: ["#academia", "#research", "#writing"],
+        likes: 567,
       },
     ],
   },
@@ -309,44 +249,48 @@ export default function TopicDetailPage() {
           <h2 className="text-3xl font-bold mb-8 tracking-wide">BLOG POSTS</h2>
           <div className="space-y-8">
             {topic.posts.map((post) => (
-              <div key={post.id} className="border-2 border-black p-8 hover:shadow-lg transition-shadow cursor-pointer">
-                <div className="flex items-start justify-between mb-4">
-                  <div className="flex-1">
-                    <p className="text-xs font-mono text-gray-600 mb-2">{post.date}</p>
-                    <h3 className="text-2xl font-bold mb-3 hover:underline">{post.title}</h3>
-                    <p className="text-gray-700 mb-4 leading-relaxed">{post.excerpt}</p>
+              <Link key={post.id} href={`/blog/${slug}/${post.id}`}>
+                <div className="border-2 border-black p-8 hover:shadow-lg transition-shadow cursor-pointer group">
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="flex-1">
+                      <p className="text-xs font-mono text-gray-600 mb-2">{post.date}</p>
+                      <h3 className="text-2xl font-bold mb-3 group-hover:underline">{post.title}</h3>
+                      <p className="text-gray-700 mb-4 leading-relaxed">{post.excerpt}</p>
 
-                    {/* Hashtags */}
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {post.hashtags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="text-xs font-mono bg-gray-100 border border-gray-300 px-3 py-1 hover:bg-black hover:text-white transition-colors"
-                        >
-                          {tag}
-                        </span>
-                      ))}
+                      {/* Hashtags */}
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {post.hashtags.map((tag) => (
+                          <span
+                            key={tag}
+                            className="text-xs font-mono bg-gray-100 border border-gray-300 px-3 py-1 hover:bg-black hover:text-white transition-colors"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Likes */}
+                    <div className="text-right ml-6">
+                      <p className="text-sm font-mono text-gray-600 mb-1">LIKES</p>
+                      <p className="text-3xl font-bold">{post.likes}</p>
                     </div>
                   </div>
 
-                  {/* Likes */}
-                  <div className="text-right ml-6">
-                    <p className="text-sm font-mono text-gray-600 mb-1">LIKES</p>
-                    <p className="text-3xl font-bold">{post.likes}</p>
+                  {/* Action Buttons */}
+                  <div className="border-t-2 border-black pt-4 flex gap-4">
+                    <Button className="flex-1 bg-black text-white hover:bg-gray-800 font-mono text-sm">
+                      READ MORE
+                    </Button>
+                    <Button className="flex-1 bg-white text-black border-2 border-black hover:bg-gray-100 font-mono text-sm">
+                      LIKE
+                    </Button>
+                    <Button className="flex-1 bg-white text-black border-2 border-black hover:bg-gray-100 font-mono text-sm">
+                      GIFT FLOWERS
+                    </Button>
                   </div>
                 </div>
-
-                {/* Action Buttons */}
-                <div className="border-t-2 border-black pt-4 flex gap-4">
-                  <Button className="flex-1 bg-black text-white hover:bg-gray-800 font-mono text-sm">READ MORE</Button>
-                  <Button className="flex-1 bg-white text-black border-2 border-black hover:bg-gray-100 font-mono text-sm">
-                    LIKE
-                  </Button>
-                  <Button className="flex-1 bg-white text-black border-2 border-black hover:bg-gray-100 font-mono text-sm">
-                    GIFT FLOWERS
-                  </Button>
-                </div>
-              </div>
+              </Link>
             ))}
           </div>
         </section>
