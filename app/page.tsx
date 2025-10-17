@@ -13,7 +13,7 @@ export default function Home() {
             <div className="text-xs tracking-widest font-mono">2025</div>
             <div className="text-xs tracking-widest font-mono">EST. 2025</div>
           </div>
-          <h1 className="text-5xl md:text-7xl font-bold text-center mb-4 tracking-tight">TALKSY</h1>
+          <h1 className="text-5xl md:text-7xl font-bold text-center mb-4 tracking-tight">Pooja talks</h1>
           <p className="text-center text-sm md:text-base tracking-widest font-mono border-t-2 border-b-2 border-black py-3">
             A CONVERSATION-BASED SOCIAL NETWORK
           </p>
@@ -135,7 +135,7 @@ export default function Home() {
         <section className="border-t-4 border-black mt-16 pt-8 text-center">
           <p className="text-sm text-gray-600 mb-4 font-mono">A peaceful space for meaningful conversations</p>
           <p className="text-xs text-gray-500 font-mono">
-            © 2025 TALKSY. All rights reserved. Be kind, be respectful, be yourself.
+            © 2025 Pooja Talks. All rights reserved. Be kind, be respectful, be yourself.
           </p>
         </section>
       </main>

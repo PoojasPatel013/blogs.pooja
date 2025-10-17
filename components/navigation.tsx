@@ -27,7 +27,7 @@ export default function Navigation() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="font-bold text-2xl tracking-widest font-serif hover:opacity-70 transition-opacity">
-            TALKSY
+            POOJA's TALKS
           </Link>
 
           {/* Desktop Navigation */}
