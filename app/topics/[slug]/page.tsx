@@ -9,6 +9,7 @@ const topicData: Record<string, any> = {
     name: "Life & Experiences",
     description:
       "Personal reflections on life, growth, and the experiences that shape who we are. From everyday moments to profound realizations, I share my journey and insights about living authentically.",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/life-PZ7EaVpXCuJh2qOHQwHLkeZMxSMU9x.jpg",
     posts: [
       {
         id: 1,
@@ -40,6 +41,7 @@ const topicData: Record<string, any> = {
     name: "Spirituality",
     description:
       "Exploring Hindu philosophy, spirituality, and ancient wisdom traditions. I share insights into Hindu teachings and their relevance to modern life.",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/spirituality-l7ORrwdI3Sfo1yzmjlhtCdnEWOB9I4.jpg",
     posts: [
       {
         id: 1,
@@ -63,6 +65,7 @@ const topicData: Record<string, any> = {
     name: "Research & Analysis",
     description:
       "Product analysis, market research, project management, and business insights. I conduct research on emerging products and market trends.",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/research-gApktgwnTqyXT3WKbm5lYxGSC3l78g.jpg",
     posts: [
       {
         id: 1,
@@ -110,6 +113,7 @@ const topicData: Record<string, any> = {
     name: "Technology & AI",
     description:
       "AI, LLMs, product analysis, and emerging tech trends. I research and write about the intersection of AI, market trends, and innovation in technology.",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/technology-jV3NuHKEtMpx4Dja6AgCaSPpyi8uYj.webp",
     posts: [
       {
         id: 1,
@@ -148,6 +152,7 @@ const topicData: Record<string, any> = {
   culture: {
     name: "Culture",
     description: "Cultural exploration and heritage.",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/culture-t7vr8oZbfQ7pNmVXTDcW12UWnE5USC.jpg",
     posts: [
       {
         id: 1,
@@ -162,6 +167,7 @@ const topicData: Record<string, any> = {
   geography: {
     name: "Geography",
     description: "Geographical exploration and discoveries.",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/geography-5tqr10XcoFEY9Tt9LG4ZZr6sVQd2UG.jpg",
     posts: [
       {
         id: 1,
@@ -176,6 +182,8 @@ const topicData: Record<string, any> = {
   random: {
     name: "Random Thoughts",
     description: "Miscellaneous musings and observations.",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/random%20thoughts-PA3DFRF9f7JbK29FE49uA9j77apJpM.jpg",
     posts: [
       {
         id: 1,
@@ -190,6 +198,7 @@ const topicData: Record<string, any> = {
   academia: {
     name: "Academia",
     description: "Academic research and scholarly insights.",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/academia-oCcvZ9S4heun5HjHpoonBzDjFgcxIg.jpg",
     posts: [
       {
         id: 1,
@@ -223,6 +232,10 @@ export default function TopicDetailPage() {
 
   return (
     <div className="min-h-screen bg-white text-black font-serif">
+      <div className="w-full h-64 md:h-96 bg-gray-200 overflow-hidden border-b-4 border-black">
+        <img src={topic.image || "/placeholder.svg"} alt={topic.name} className="w-full h-full object-cover" />
+      </div>
+
       {/* Header */}
       <header className="border-b-4 border-black py-8 px-6 md:px-12">
         <div className="max-w-6xl mx-auto">
@@ -285,9 +298,16 @@ export default function TopicDetailPage() {
                     <Button className="flex-1 bg-white text-black border-2 border-black hover:bg-gray-100 font-mono text-sm">
                       LIKE
                     </Button>
-                    <Button className="flex-1 bg-white text-black border-2 border-black hover:bg-gray-100 font-mono text-sm">
-                      GIFT FLOWERS
-                    </Button>
+                    <a
+                      href="https://buymeacoffee.com/pooja.p"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1"
+                    >
+                      <Button className="w-full bg-white text-black border-2 border-black hover:bg-gray-100 font-mono text-sm">
+                        GIFT FLOWERS
+                      </Button>
+                    </a>
                   </div>
                 </div>
               </Link>

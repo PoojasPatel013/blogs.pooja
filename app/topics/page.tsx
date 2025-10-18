@@ -39,28 +39,29 @@ const otherTopics = [
     slug: "culture",
     name: "Culture",
     description: "Cultural exploration and heritage.",
-    icon: "🎭",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/culture-t7vr8oZbfQ7pNmVXTDcW12UWnE5USC.jpg",
     posts: 12,
   },
   {
     slug: "geography",
     name: "Geography",
     description: "Geographical exploration and discoveries.",
-    icon: "🗺️",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/geography-5tqr10XcoFEY9Tt9LG4ZZr6sVQd2UG.jpg",
     posts: 15,
   },
   {
     slug: "random",
     name: "Random Thoughts",
     description: "Miscellaneous musings and observations.",
-    icon: "💭",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/random%20thoughts-PA3DFRF9f7JbK29FE49uA9j77apJpM.jpg",
     posts: 8,
   },
   {
     slug: "academia",
     name: "Academia",
     description: "Academic research and scholarly insights.",
-    icon: "📚",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/academia-oCcvZ9S4heun5HjHpoonBzDjFgcxIg.jpg",
     posts: 11,
   },
 ]
@@ -132,24 +133,31 @@ export default function TopicsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {otherTopics.map((topic) => (
               <Link key={topic.slug} href={`/topics/${topic.slug}`}>
-                <div className="border-4 border-black p-6 hover:shadow-xl transition-shadow h-full flex flex-col cursor-pointer group bg-white">
-                  {/* Icon */}
-                  <div className="text-5xl mb-4">{topic.icon}</div>
-
-                  {/* Content */}
-                  <h3 className="text-xl font-bold mb-2 tracking-wide group-hover:underline">{topic.name}</h3>
-                  <p className="text-gray-700 mb-6 leading-relaxed flex-1 text-sm">{topic.description}</p>
-
-                  {/* Stats */}
-                  <div className="border-t-2 border-black pt-4 mb-4">
-                    <p className="text-sm font-mono text-gray-600">
-                      {topic.posts} BLOG POST{topic.posts !== 1 ? "S" : ""}
-                    </p>
+                <div className="border-4 border-black overflow-hidden hover:shadow-xl transition-shadow h-full flex flex-col cursor-pointer group bg-white">
+                  <div className="h-32 bg-gray-200 overflow-hidden border-b-4 border-black">
+                    <img
+                      src={topic.image || "/placeholder.svg"}
+                      alt={topic.name}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform"
+                    />
                   </div>
 
-                  <Button className="w-full bg-black text-white hover:bg-gray-800 font-mono tracking-widest text-sm">
-                    EXPLORE
-                  </Button>
+                  {/* Content */}
+                  <div className="p-6 flex-1 flex flex-col">
+                    <h3 className="text-xl font-bold mb-2 tracking-wide group-hover:underline">{topic.name}</h3>
+                    <p className="text-gray-700 mb-6 leading-relaxed flex-1 text-sm">{topic.description}</p>
+
+                    {/* Stats */}
+                    <div className="border-t-2 border-black pt-4 mb-4">
+                      <p className="text-sm font-mono text-gray-600">
+                        {topic.posts} BLOG POST{topic.posts !== 1 ? "S" : ""}
+                      </p>
+                    </div>
+
+                    <Button className="w-full bg-black text-white hover:bg-gray-800 font-mono tracking-widest text-sm">
+                      EXPLORE
+                    </Button>
+                  </div>
                 </div>
               </Link>
             ))}
