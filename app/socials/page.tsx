@@ -4,10 +4,10 @@ import { Button } from "@/components/ui/button"
 export default function SocialsPage() {
   const socialLinks = [
     {
-      name: "Twitter/X",
-      url: "https://twitter.com",
+      name: "Bluesky",
+      url: "https://bsky.app",
       description: "Follow for daily insights on AI, tech trends, and research updates",
-      icon: "𝕏",
+      icon: "🦋",
     },
     {
       name: "LinkedIn",
@@ -26,18 +26,6 @@ export default function SocialsPage() {
       url: "https://github.com",
       description: "Explore my projects and research implementations",
       icon: "⚙️",
-    },
-    {
-      name: "Medium",
-      url: "https://medium.com",
-      description: "In-depth articles on AI, product analysis, and research",
-      icon: "📝",
-    },
-    {
-      name: "Buy Me Coffee",
-      url: "https://buymeacoffee.com/pooja.p",
-      description: "Support my research and writing",
-      icon: "☕",
     },
   ]
 
@@ -144,7 +132,7 @@ export default function SocialsPage() {
         {/* Social Links Section */}
         <section className="border-t-4 border-black pt-12">
           <h2 className="text-3xl font-bold mb-8 tracking-wide">CONNECT WITH ME</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {socialLinks.map((social) => (
               <a key={social.name} href={social.url} target="_blank" rel="noopener noreferrer" className="group">
                 <div className="border-4 border-black p-6 hover:shadow-lg transition-shadow h-full flex flex-col bg-white hover:bg-gray-50">

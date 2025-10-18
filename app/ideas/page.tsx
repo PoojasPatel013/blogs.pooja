@@ -1,13 +1,14 @@
 "use client"
 
 import type React from "react"
-
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
+import emailjs from "@emailjs/browser"
+
+// Initialize EmailJS
+emailjs.init("YOUR_EMAILJS_PUBLIC_KEY")
 
 export default function IdeasPage() {
-  const [selectedTopic, setSelectedTopic] = useState("technology")
-  const [ideaType, setIdeaType] = useState("suggestion")
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -17,6 +18,8 @@ export default function IdeasPage() {
     description: "",
     hashtags: "",
   })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitMessage, setSubmitMessage] = useState("")
 
   const topics = [
     { value: "life", label: "Life & Experiences" },
@@ -44,19 +47,40 @@ export default function IdeasPage() {
     }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    console.log("Form submitted:", formData)
-    alert("Thank you for your idea! I'll review it soon.")
-    setFormData({
-      name: "",
-      email: "",
-      topic: "technology",
-      type: "suggestion",
-      title: "",
-      description: "",
-      hashtags: "",
-    })
+    setIsSubmitting(true)
+    setSubmitMessage("")
+
+    try {
+      // Send email using EmailJS
+      await emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
+        to_email: "poojaspatel1375@gmail.com",
+        from_name: formData.name,
+        from_email: formData.email,
+        topic: formData.topic,
+        type: formData.type,
+        title: formData.title,
+        description: formData.description,
+        hashtags: formData.hashtags,
+      })
+
+      setSubmitMessage("Thank you for your idea! I'll review it soon.")
+      setFormData({
+        name: "",
+        email: "",
+        topic: "technology",
+        type: "suggestion",
+        title: "",
+        description: "",
+        hashtags: "",
+      })
+    } catch (error) {
+      console.error("Error sending email:", error)
+      setSubmitMessage("There was an error sending your idea. Please try again.")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -88,6 +112,15 @@ export default function IdeasPage() {
           <div className="lg:col-span-2">
             <form onSubmit={handleSubmit} className="border-4 border-black p-8">
               <h3 className="text-2xl font-bold mb-8 tracking-wide">SUBMIT YOUR IDEA</h3>
+
+              {/* Success/Error Message */}
+              {submitMessage && (
+                <div
+                  className={`mb-6 p-4 border-2 ${submitMessage.includes("error") ? "border-red-500 bg-red-50" : "border-green-500 bg-green-50"}`}
+                >
+                  <p className={submitMessage.includes("error") ? "text-red-700" : "text-green-700"}>{submitMessage}</p>
+                </div>
+              )}
 
               {/* Name and Email */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
@@ -195,9 +228,10 @@ export default function IdeasPage() {
               {/* Submit Button */}
               <Button
                 type="submit"
-                className="w-full bg-black text-white hover:bg-gray-800 font-mono tracking-widest py-6 text-lg"
+                disabled={isSubmitting}
+                className="w-full bg-black text-white hover:bg-gray-800 font-mono tracking-widest py-6 text-lg disabled:opacity-50"
               >
-                SUBMIT IDEA
+                {isSubmitting ? "SENDING..." : "SUBMIT IDEA"}
               </Button>
             </form>
           </div>
@@ -252,17 +286,6 @@ export default function IdeasPage() {
                   <span>I credit you if your idea is featured</span>
                 </li>
               </ol>
-            </div>
-
-            {/* Support */}
-            <div className="border-4 border-black p-6 bg-gray-50">
-              <h3 className="text-xl font-bold mb-4 tracking-wide">LOVE MY CONTENT?</h3>
-              <p className="text-sm mb-4 leading-relaxed">
-                Support my research and writing by buying me coffee or sending flowers.
-              </p>
-              <a href="https://buymeacoffee.com/pooja.p" target="_blank" rel="noopener noreferrer">
-                <Button className="w-full bg-black text-white hover:bg-gray-800 font-mono text-sm">SUPPORT ME</Button>
-              </a>
             </div>
           </div>
         </section>

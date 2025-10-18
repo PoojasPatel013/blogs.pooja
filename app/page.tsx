@@ -38,7 +38,7 @@ export default function Home() {
         <section className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           {/* Topics Card */}
           <div className="border-4 border-black overflow-hidden hover:shadow-lg transition-shadow">
-            <div className="h-32 bg-gray-200 flex items-center justify-center overflow-hidden">
+            <div className="h-40 bg-gray-200 flex items-center justify-center overflow-hidden">
               <img
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/topics-DwJEHJ51pXDHGWSO3qMvrmGyL26WED.jpg"
                 alt="Topics"
@@ -61,7 +61,7 @@ export default function Home() {
 
           {/* Shop Card */}
           <div className="border-4 border-black overflow-hidden hover:shadow-lg transition-shadow">
-            <div className="h-32 bg-gray-200 flex items-center justify-center overflow-hidden">
+            <div className="h-40 bg-gray-200 flex items-center justify-center overflow-hidden">
               <img
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/shop-3Apnb0cnZLR1Bw8VTctjmyj4qQTuyp.jpg"
                 alt="Shop"
@@ -83,7 +83,7 @@ export default function Home() {
 
           {/* Research Card */}
           <div className="border-4 border-black overflow-hidden hover:shadow-lg transition-shadow">
-            <div className="h-32 bg-gray-200 flex items-center justify-center overflow-hidden">
+            <div className="h-40 bg-gray-200 flex items-center justify-center overflow-hidden">
               <img
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/researchhome-clNFpgxytsDtzaVJsVXJqtjbjcuS4n.jpg"
                 alt="Research"
@@ -106,7 +106,7 @@ export default function Home() {
 
           {/* About Me Card */}
           <div className="border-4 border-black overflow-hidden hover:shadow-lg transition-shadow">
-            <div className="h-32 bg-gray-200 flex items-center justify-center overflow-hidden">
+            <div className="h-40 bg-gray-200 flex items-center justify-center overflow-hidden">
               <img
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/aboutme-BkF9nmVne1vvFvEwwuUpNxssI6ctid.jpg"
                 alt="About Me"
@@ -129,7 +129,7 @@ export default function Home() {
 
           {/* Ideas Card */}
           <div className="border-4 border-black overflow-hidden hover:shadow-lg transition-shadow">
-            <div className="h-32 bg-gray-200 flex items-center justify-center overflow-hidden">
+            <div className="h-40 bg-gray-200 flex items-center justify-center overflow-hidden">
               <img
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ideas.-FV5rKlpS9wfJFHgkZeym0Jtm847uA4.jpg"
                 alt="Ideas"
@@ -139,8 +139,8 @@ export default function Home() {
             <div className="p-8">
               <h3 className="text-2xl font-bold mb-4 tracking-wide">LEAVE IDEAS</h3>
               <p className="text-gray-700 mb-6 leading-relaxed">
-                Share your thoughts, suggestions, and ideas on my blog topics. Like posts and send me flowers as
-                appreciation.
+                Share your thoughts, suggestions, and ideas on my blog topics. I'd love to hear from you and your
+                feedback.
               </p>
               <Link href="/ideas">
                 <Button className="w-full bg-black text-white hover:bg-gray-800 font-mono tracking-widest">
@@ -152,7 +152,7 @@ export default function Home() {
 
           {/* Support Card */}
           <div className="border-4 border-black overflow-hidden hover:shadow-lg transition-shadow">
-            <div className="h-32 bg-gray-200 flex items-center justify-center overflow-hidden">
+            <div className="h-40 bg-gray-200 flex items-center justify-center overflow-hidden">
               <img
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/support-Nn0iPp4Xcro2NEmmA8pjctST8AWR5d.jpg"
                 alt="Support"
@@ -162,14 +162,14 @@ export default function Home() {
             <div className="p-8">
               <h3 className="text-2xl font-bold mb-4 tracking-wide">SUPPORT ME</h3>
               <p className="text-gray-700 mb-6 leading-relaxed">
-                Enjoy my content? Support my research and writing by buying me coffee or sending flowers. Every
-                contribution helps.
+                Enjoy my content? Support my research and writing by sending flowers or connecting with me on social
+                platforms.
               </p>
-              <a href="https://buymeacoffee.com/pooja.p" target="_blank" rel="noopener noreferrer">
+              <Link href="/socials">
                 <Button className="w-full bg-black text-white hover:bg-gray-800 font-mono tracking-widest">
-                  BUY ME COFFEE
+                  CONNECT WITH ME
                 </Button>
-              </a>
+              </Link>
             </div>
           </div>
         </section>
@@ -214,7 +214,7 @@ export default function Home() {
               <div className="border-2 border-black overflow-hidden hover:shadow-lg transition-shadow">
                 <div className="h-40 bg-gray-200 flex items-center justify-center text-sm font-mono overflow-hidden">
                   <img
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/research-gApktgwnTqyXT3WKbm5lYxGSC3l78g.jpg"
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/researchhome-clNFpgxytsDtzaVJsVXJqtjbjcuS4n.jpg"
                     alt="Research"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform"
                   />
