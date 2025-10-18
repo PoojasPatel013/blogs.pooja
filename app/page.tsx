@@ -39,13 +39,7 @@ export default function Home() {
           {/* Topics Card */}
           <div className="border-4 border-black overflow-hidden hover:shadow-lg transition-shadow">
             <div className="h-48 bg-gray-100 flex items-center justify-center overflow-hidden p-4">
-              <svg
-                viewBox="0 0 200 200"
-                className="w-full h-full max-w-xs max-h-xs object-contain"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <image href="/svg/topics.svg" width="200" height="200" />
-              </svg>
+              <img src="/svg/topics.svg" alt="Topics" className="w-full h-full object-contain" />
             </div>
             <div className="p-8">
               <h3 className="text-2xl font-bold mb-4 tracking-wide">TOPICS</h3>
@@ -64,13 +58,7 @@ export default function Home() {
           {/* Shop Card */}
           <div className="border-4 border-black overflow-hidden hover:shadow-lg transition-shadow">
             <div className="h-48 bg-gray-100 flex items-center justify-center overflow-hidden p-4">
-              <svg
-                viewBox="0 0 200 200"
-                className="w-full h-full max-w-xs max-h-xs object-contain"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <image href="/svg/shop.svg" width="200" height="200" />
-              </svg>
+              <img src="/svg/shop.svg" alt="Shop" className="w-full h-full object-contain" />
             </div>
             <div className="p-8">
               <h3 className="text-2xl font-bold mb-4 tracking-wide">MY SHOP</h3>
@@ -88,13 +76,7 @@ export default function Home() {
           {/* Research Card */}
           <div className="border-4 border-black overflow-hidden hover:shadow-lg transition-shadow">
             <div className="h-48 bg-gray-100 flex items-center justify-center overflow-hidden p-4">
-              <svg
-                viewBox="0 0 200 200"
-                className="w-full h-full max-w-xs max-h-xs object-contain"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <image href="/svg/research.svg" width="200" height="200" />
-              </svg>
+              <img src="/svg/research.svg" alt="Research" className="w-full h-full object-contain" />
             </div>
             <div className="p-8">
               <h3 className="text-2xl font-bold mb-4 tracking-wide">RESEARCH</h3>
@@ -113,13 +95,7 @@ export default function Home() {
           {/* About Me Card */}
           <div className="border-4 border-black overflow-hidden hover:shadow-lg transition-shadow">
             <div className="h-48 bg-gray-100 flex items-center justify-center overflow-hidden p-4">
-              <svg
-                viewBox="0 0 200 200"
-                className="w-full h-full max-w-xs max-h-xs object-contain"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <image href="/svg/about.svg" width="200" height="200" />
-              </svg>
+              <img src="/svg/about.svg" alt="About Me" className="w-full h-full object-contain" />
             </div>
             <div className="p-8">
               <h3 className="text-2xl font-bold mb-4 tracking-wide">ABOUT ME</h3>
@@ -138,13 +114,7 @@ export default function Home() {
           {/* Ideas Card */}
           <div className="border-4 border-black overflow-hidden hover:shadow-lg transition-shadow">
             <div className="h-48 bg-gray-100 flex items-center justify-center overflow-hidden p-4">
-              <svg
-                viewBox="0 0 200 200"
-                className="w-full h-full max-w-xs max-h-xs object-contain"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <image href="/svg/ideas.svg" width="200" height="200" />
-              </svg>
+              <img src="/svg/ideas.svg" alt="Ideas" className="w-full h-full object-contain" />
             </div>
             <div className="p-8">
               <h3 className="text-2xl font-bold mb-4 tracking-wide">LEAVE IDEAS</h3>
@@ -163,13 +133,7 @@ export default function Home() {
           {/* Support Card */}
           <div className="border-4 border-black overflow-hidden hover:shadow-lg transition-shadow">
             <div className="h-48 bg-gray-100 flex items-center justify-center overflow-hidden p-4">
-              <svg
-                viewBox="0 0 200 200"
-                className="w-full h-full max-w-xs max-h-xs object-contain"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <image href="/svg/support.svg" width="200" height="200" />
-              </svg>
+              <img src="/svg/support.svg" alt="Support" className="w-full h-full object-contain" />
             </div>
             <div className="p-8">
               <h3 className="text-2xl font-bold mb-4 tracking-wide">SUPPORT ME</h3>
