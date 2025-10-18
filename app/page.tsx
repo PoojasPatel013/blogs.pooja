@@ -38,12 +38,14 @@ export default function Home() {
         <section className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           {/* Topics Card */}
           <div className="border-4 border-black overflow-hidden hover:shadow-lg transition-shadow">
-            <div className="h-40 bg-gray-200 flex items-center justify-center overflow-hidden">
-              <img
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/topics-DwJEHJ51pXDHGWSO3qMvrmGyL26WED.jpg"
-                alt="Topics"
-                className="w-full h-full object-cover"
-              />
+            <div className="h-48 bg-gray-100 flex items-center justify-center overflow-hidden p-4">
+              <svg
+                viewBox="0 0 200 200"
+                className="w-full h-full max-w-xs max-h-xs object-contain"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <image href="/svg/topics.svg" width="200" height="200" />
+              </svg>
             </div>
             <div className="p-8">
               <h3 className="text-2xl font-bold mb-4 tracking-wide">TOPICS</h3>
@@ -61,12 +63,14 @@ export default function Home() {
 
           {/* Shop Card */}
           <div className="border-4 border-black overflow-hidden hover:shadow-lg transition-shadow">
-            <div className="h-40 bg-gray-200 flex items-center justify-center overflow-hidden">
-              <img
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/shop-3Apnb0cnZLR1Bw8VTctjmyj4qQTuyp.jpg"
-                alt="Shop"
-                className="w-full h-full object-cover"
-              />
+            <div className="h-48 bg-gray-100 flex items-center justify-center overflow-hidden p-4">
+              <svg
+                viewBox="0 0 200 200"
+                className="w-full h-full max-w-xs max-h-xs object-contain"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <image href="/svg/shop.svg" width="200" height="200" />
+              </svg>
             </div>
             <div className="p-8">
               <h3 className="text-2xl font-bold mb-4 tracking-wide">MY SHOP</h3>
@@ -83,12 +87,14 @@ export default function Home() {
 
           {/* Research Card */}
           <div className="border-4 border-black overflow-hidden hover:shadow-lg transition-shadow">
-            <div className="h-40 bg-gray-200 flex items-center justify-center overflow-hidden">
-              <img
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/researchhome-clNFpgxytsDtzaVJsVXJqtjbjcuS4n.jpg"
-                alt="Research"
-                className="w-full h-full object-cover"
-              />
+            <div className="h-48 bg-gray-100 flex items-center justify-center overflow-hidden p-4">
+              <svg
+                viewBox="0 0 200 200"
+                className="w-full h-full max-w-xs max-h-xs object-contain"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <image href="/svg/research.svg" width="200" height="200" />
+              </svg>
             </div>
             <div className="p-8">
               <h3 className="text-2xl font-bold mb-4 tracking-wide">RESEARCH</h3>
@@ -106,12 +112,14 @@ export default function Home() {
 
           {/* About Me Card */}
           <div className="border-4 border-black overflow-hidden hover:shadow-lg transition-shadow">
-            <div className="h-40 bg-gray-200 flex items-center justify-center overflow-hidden">
-              <img
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/aboutme-BkF9nmVne1vvFvEwwuUpNxssI6ctid.jpg"
-                alt="About Me"
-                className="w-full h-full object-cover"
-              />
+            <div className="h-48 bg-gray-100 flex items-center justify-center overflow-hidden p-4">
+              <svg
+                viewBox="0 0 200 200"
+                className="w-full h-full max-w-xs max-h-xs object-contain"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <image href="/svg/about.svg" width="200" height="200" />
+              </svg>
             </div>
             <div className="p-8">
               <h3 className="text-2xl font-bold mb-4 tracking-wide">ABOUT ME</h3>
@@ -129,12 +137,14 @@ export default function Home() {
 
           {/* Ideas Card */}
           <div className="border-4 border-black overflow-hidden hover:shadow-lg transition-shadow">
-            <div className="h-40 bg-gray-200 flex items-center justify-center overflow-hidden">
-              <img
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ideas.-FV5rKlpS9wfJFHgkZeym0Jtm847uA4.jpg"
-                alt="Ideas"
-                className="w-full h-full object-cover"
-              />
+            <div className="h-48 bg-gray-100 flex items-center justify-center overflow-hidden p-4">
+              <svg
+                viewBox="0 0 200 200"
+                className="w-full h-full max-w-xs max-h-xs object-contain"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <image href="/svg/ideas.svg" width="200" height="200" />
+              </svg>
             </div>
             <div className="p-8">
               <h3 className="text-2xl font-bold mb-4 tracking-wide">LEAVE IDEAS</h3>
@@ -152,12 +162,14 @@ export default function Home() {
 
           {/* Support Card */}
           <div className="border-4 border-black overflow-hidden hover:shadow-lg transition-shadow">
-            <div className="h-40 bg-gray-200 flex items-center justify-center overflow-hidden">
-              <img
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/support-Nn0iPp4Xcro2NEmmA8pjctST8AWR5d.jpg"
-                alt="Support"
-                className="w-full h-full object-cover"
-              />
+            <div className="h-48 bg-gray-100 flex items-center justify-center overflow-hidden p-4">
+              <svg
+                viewBox="0 0 200 200"
+                className="w-full h-full max-w-xs max-h-xs object-contain"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <image href="/svg/support.svg" width="200" height="200" />
+              </svg>
             </div>
             <div className="p-8">
               <h3 className="text-2xl font-bold mb-4 tracking-wide">SUPPORT ME</h3>
@@ -182,7 +194,7 @@ export default function Home() {
               <div className="border-2 border-black overflow-hidden hover:shadow-lg transition-shadow">
                 <div className="h-40 bg-gray-200 flex items-center justify-center text-sm font-mono overflow-hidden">
                   <img
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/life-PZ7EaVpXCuJh2qOHQwHLkeZMxSMU9x.jpg"
+                    src="/images/design-mode/life.jpg"
                     alt="Life"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform"
                   />
@@ -198,7 +210,7 @@ export default function Home() {
               <div className="border-2 border-black overflow-hidden hover:shadow-lg transition-shadow">
                 <div className="h-40 bg-gray-200 flex items-center justify-center text-sm font-mono overflow-hidden">
                   <img
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/technology-jV3NuHKEtMpx4Dja6AgCaSPpyi8uYj.webp"
+                    src="/images/design-mode/technology.webp"
                     alt="Technology"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform"
                   />
@@ -214,7 +226,7 @@ export default function Home() {
               <div className="border-2 border-black overflow-hidden hover:shadow-lg transition-shadow">
                 <div className="h-40 bg-gray-200 flex items-center justify-center text-sm font-mono overflow-hidden">
                   <img
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/researchhome-clNFpgxytsDtzaVJsVXJqtjbjcuS4n.jpg"
+                    src="/images/design-mode/researchhome.jpg"
                     alt="Research"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform"
                   />
