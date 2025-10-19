@@ -4,20 +4,7 @@ import { Button } from "@/components/ui/button"
 
 export default function SupportPage() {
   const supportOptions = [
-    {
-      title: "Buy Me Coffee",
-      description: "Support my research and writing with a coffee",
-      amount: "$3",
-      icon: "☕",
-      color: "bg-amber-50",
-    },
-    {
-      title: "Send Flowers",
-      description: "Show appreciation for my blog posts and ideas",
-      amount: "$5",
-      icon: "🌸",
-      color: "bg-pink-50",
-    },
+    
     {
       title: "Support My Research",
       description: "Help fund my ongoing research projects",

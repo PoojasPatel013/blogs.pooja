@@ -5,25 +5,25 @@ export default function SocialsPage() {
   const socialLinks = [
     {
       name: "Bluesky",
-      url: "https://bsky.app",
+      url: "https://bsky.app/profile/ps-me.bsky.social",
       description: "Follow for daily insights on AI, tech trends, and research updates",
       icon: "🦋",
     },
     {
       name: "LinkedIn",
-      url: "https://linkedin.com",
+      url: "https://www.linkedin.com/in/pooja-p-77329933b/",
       description: "Connect for professional updates and project management insights",
       icon: "in",
     },
     {
       name: "Instagram",
-      url: "https://instagram.com",
+      url: "https://instagram.com/fiery.pooja/",
       description: "Visual journey through my personal gallery and travels",
       icon: "📷",
     },
     {
       name: "GitHub",
-      url: "https://github.com",
+      url: "https://github.com/PoojasPatel013",
       description: "Explore my projects and research implementations",
       icon: "⚙️",
     },
@@ -83,7 +83,7 @@ export default function SocialsPage() {
               <ul className="space-y-2 text-sm">
                 <li className="font-mono">• History & Culture</li>
                 <li className="font-mono">• Archaeology</li>
-                <li className="font-mono">• Hinduism</li>
+                <li className="font-mono">• Spirituality</li>
                 <li className="font-mono">• Geography</li>
                 <li className="font-mono">• Nature</li>
               </ul>
