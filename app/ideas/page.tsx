@@ -3,10 +3,7 @@
 import type React from "react"
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import emailjs from "@emailjs/browser"
-
-// Initialize EmailJS
-emailjs.init("YOUR_EMAILJS_PUBLIC_KEY")
+import { sendIdeaEmail } from "./actions"
 
 export default function IdeasPage() {
   const [formData, setFormData] = useState({
@@ -52,20 +49,10 @@ export default function IdeasPage() {
     setIsSubmitting(true)
     setSubmitMessage("")
 
-    try {
-      // Send email using EmailJS
-      await emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
-        to_email: "poojaspatel1375@gmail.com",
-        from_name: formData.name,
-        from_email: formData.email,
-        topic: formData.topic,
-        type: formData.type,
-        title: formData.title,
-        description: formData.description,
-        hashtags: formData.hashtags,
-      })
+    const result = await sendIdeaEmail(formData)
 
-      setSubmitMessage("Thank you for your idea! I'll review it soon.")
+    if (result.success) {
+      setSubmitMessage(result.message)
       setFormData({
         name: "",
         email: "",
@@ -75,12 +62,11 @@ export default function IdeasPage() {
         description: "",
         hashtags: "",
       })
-    } catch (error) {
-      console.error("Error sending email:", error)
-      setSubmitMessage("There was an error sending your idea. Please try again.")
-    } finally {
-      setIsSubmitting(false)
+    } else {
+      setSubmitMessage(result.message)
     }
+
+    setIsSubmitting(false)
   }
 
   return (
