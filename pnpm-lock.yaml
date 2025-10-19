@@ -9,10 +9,10 @@ importers:
   .:
     dependencies:
       '@emailjs/browser':
-        specifier: 4.4.1
+        specifier: latest
         version: 4.4.1
       '@emailjs/nodejs':
-        specifier: latest
+        specifier: 5.0.2
         version: 5.0.2
       '@hookform/resolvers':
         specifier: ^3.10.0
