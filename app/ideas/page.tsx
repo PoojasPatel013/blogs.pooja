@@ -3,7 +3,7 @@
 import type React from "react"
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import emailjs from "@/lib/emailjs-config"
+import { sendIdeaEmail } from "./actions"
 
 export default function IdeasPage() {
   const [formData, setFormData] = useState({
@@ -49,55 +49,21 @@ export default function IdeasPage() {
     setIsSubmitting(true)
     setSubmitMessage("")
 
-    try {
-      const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID
-      const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID
+    const result = await sendIdeaEmail(formData)
 
-      if (!serviceId) {
-        console.log("[v0] Missing service ID:", serviceId)
-        setSubmitMessage("Email service is not configured. Please contact the site administrator.")
-        setIsSubmitting(false)
-        return
-      }
-
-      if (!templateId) {
-        console.log("[v0] Missing template ID:", templateId)
-        setSubmitMessage("Email service is not configured. Please contact the site administrator.")
-        setIsSubmitting(false)
-        return
-      }
-
-      console.log("[v0] Sending email with:", { serviceId, templateId, name: formData.name })
-
-      const response = await emailjs.send(serviceId, templateId, {
-        to_email: "poojaspatel1375@gmail.com",
-        from_name: formData.name,
-        from_email: formData.email,
-        topic: formData.topic,
-        type: formData.type,
-        title: formData.title,
-        description: formData.description,
-        hashtags: formData.hashtags,
+    if (result.success) {
+      setSubmitMessage(result.message)
+      setFormData({
+        name: "",
+        email: "",
+        topic: "technology",
+        type: "suggestion",
+        title: "",
+        description: "",
+        hashtags: "",
       })
-
-      console.log("[v0] Email sent successfully:", response)
-
-      if (response.status === 200) {
-        setSubmitMessage("Thank you for your idea! I'll review it soon.")
-        setFormData({
-          name: "",
-          email: "",
-          topic: "technology",
-          type: "suggestion",
-          title: "",
-          description: "",
-          hashtags: "",
-        })
-      }
-    } catch (error) {
-      console.error("[v0] Error sending email:", error)
-      const errorMessage = error instanceof Error ? error.message : "Unknown error"
-      setSubmitMessage(`There was an error sending your idea: ${errorMessage}. Please try again.`)
+    } else {
+      setSubmitMessage(result.message)
     }
 
     setIsSubmitting(false)

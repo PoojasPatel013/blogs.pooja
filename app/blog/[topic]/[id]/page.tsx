@@ -11,7 +11,7 @@ const blogContent: Record<string, Record<string, any>> = {
       date: "2025-01-15",
       topic: "Life & Experiences",
       hashtags: ["#life", "#growth", "#reflection"],
-      likes: 234,
+      likes: 2,
       content: `
         <h2>Finding Purpose in Everyday Moments</h2>
         <p>Life often feels like we're rushing from one moment to the next, constantly chasing the next milestone or achievement. But what if the real magic lies in the everyday moments we often overlook?</p>
@@ -33,7 +33,7 @@ const blogContent: Record<string, Record<string, any>> = {
       date: "2025-01-10",
       topic: "Life & Experiences",
       hashtags: ["#relationships", "#communication", "#life"],
-      likes: 189,
+      likes: 1,
       content: `
         <h2>The Art of Meaningful Conversations</h2>
         <p>In our fast-paced world, genuine conversations have become increasingly rare. Yet, meaningful dialogue is one of the most powerful tools for connection and understanding.</p>
@@ -55,7 +55,7 @@ const blogContent: Record<string, Record<string, any>> = {
       date: "2025-01-05",
       topic: "Life & Experiences",
       hashtags: ["#growth", "#change", "#mindfulness"],
-      likes: 156,
+      likes: 1,
       content: `
         <h2>Embracing Change and Uncertainty</h2>
         <p>Change is the only constant in life, yet we often resist it. Learning to embrace uncertainty and navigate transitions with grace is one of life's greatest lessons.</p>
@@ -79,7 +79,7 @@ const blogContent: Record<string, Record<string, any>> = {
       date: "2025-01-13",
       topic: "Spirituality",
       hashtags: ["#hinduism", "#spirituality", "#philosophy"],
-      likes: 289,
+      likes: 2,
       content: `
         <h2>The Bhagavad Gita: Timeless Wisdom for Modern Times</h2>
         <p>The Bhagavad Gita, a 700-verse Hindu scripture, contains profound wisdom that remains relevant thousands of years after it was written. Its teachings on duty, action, and the nature of reality offer guidance for navigating modern life's challenges.</p>
@@ -95,29 +95,7 @@ const blogContent: Record<string, Record<string, any>> = {
         
         <p>By studying the Gita, we can find answers to life's deepest questions and discover a path to inner peace and fulfillment.</p>
       `,
-    },
-    "2": {
-      title: "Understanding Karma and Dharma",
-      date: "2025-01-07",
-      topic: "Spirituality",
-      hashtags: ["#hinduism", "#karma", "#dharma"],
-      likes: 234,
-      content: `
-        <h2>Understanding Karma and Dharma</h2>
-        <p>Two of the most fundamental concepts in Hindu philosophy are karma and dharma. Understanding these principles can transform how we approach life and our responsibilities.</p>
-        
-        <h3>The Law of Karma</h3>
-        <p>Karma is often misunderstood as a system of punishment and reward. In reality, it's the law of cause and effect—every action has consequences. Our thoughts, words, and deeds create ripples that shape our reality.</p>
-        
-        <h3>Dharma: Your Life Purpose</h3>
-        <p>Dharma refers to one's duty, purpose, and the righteous path. It's not a fixed destiny but rather a calling that evolves as we grow. Living in alignment with our dharma brings fulfillment and peace.</p>
-        
-        <h3>Balancing Karma and Dharma</h3>
-        <p>By understanding karma, we become conscious of our actions. By living according to our dharma, we ensure those actions are aligned with our highest purpose.</p>
-        
-        <p>Reflect on your dharma: What is your unique purpose and calling in this lifetime?</p>
-      `,
-    },
+    }
   },
   research: {
     "1": {
@@ -125,7 +103,7 @@ const blogContent: Record<string, Record<string, any>> = {
       date: "2025-01-16",
       topic: "Research & Analysis",
       hashtags: ["#productanalysis", "#research", "#business"],
-      likes: 398,
+      likes: 3,
       content: `
         <h2>Product Analysis Framework: A Comprehensive Guide</h2>
         <p>Effective product analysis is crucial for understanding market opportunities and making informed business decisions. This guide provides a comprehensive framework for analyzing products systematically.</p>
@@ -144,107 +122,7 @@ const blogContent: Record<string, Record<string, any>> = {
         
         <p>By following this framework, you can conduct thorough product analysis that informs strategic decisions.</p>
       `,
-    },
-    "2": {
-      title: "Market Trends Q1 2025: What's Emerging",
-      date: "2025-01-12",
-      topic: "Research & Analysis",
-      hashtags: ["#markettrends", "#research", "#business"],
-      likes: 334,
-      content: `
-        <h2>Market Trends Q1 2025: What's Emerging</h2>
-        <p>As we move through Q1 2025, several significant market trends are emerging that will shape business strategy and innovation across industries.</p>
-        
-        <h3>AI Integration Across Industries</h3>
-        <p>AI is no longer confined to tech companies. We're seeing rapid adoption across healthcare, finance, retail, and manufacturing. Organizations that effectively integrate AI will gain competitive advantages.</p>
-        
-        <h3>Sustainability as a Core Value</h3>
-        <p>Consumers increasingly demand sustainable products and practices. Companies that prioritize environmental responsibility are attracting loyal customers and investors.</p>
-        
-        <h3>Remote Work Evolution</h3>
-        <p>The remote work landscape continues to evolve with hybrid models becoming the norm. Tools and platforms supporting distributed teams are thriving.</p>
-        
-        <h3>Data Privacy and Security</h3>
-        <p>With increasing data breaches, privacy and security have become paramount. Consumers are more conscious about how their data is used and protected.</p>
-        
-        <p>Stay ahead of these trends to position your business for success in 2025.</p>
-      `,
-    },
-    "3": {
-      title: "Project Management Best Practices",
-      date: "2025-01-08",
-      topic: "Research & Analysis",
-      hashtags: ["#projectmanagement", "#leadership", "#business"],
-      likes: 289,
-      content: `
-        <h2>Project Management Best Practices</h2>
-        <p>Successful project management requires a combination of planning, communication, and adaptability. Here are the best practices that lead to successful project outcomes.</p>
-        
-        <h3>Clear Goals and Scope</h3>
-        <p>Define clear, measurable goals and establish project scope early. This prevents scope creep and keeps the team aligned on objectives.</p>
-        
-        <h3>Effective Communication</h3>
-        <p>Regular communication with stakeholders and team members is essential. Use clear channels and ensure everyone understands their roles and responsibilities.</p>
-        
-        <h3>Risk Management</h3>
-        <p>Identify potential risks early and develop mitigation strategies. Proactive risk management prevents crises and keeps projects on track.</p>
-        
-        <h3>Continuous Monitoring and Adjustment</h3>
-        <p>Monitor progress regularly and be prepared to adjust plans as needed. Flexibility and responsiveness are key to navigating unexpected challenges.</p>
-        
-        <p>Apply these practices to your next project and watch your success rate improve.</p>
-      `,
-    },
-    "4": {
-      title: "Conducting Effective Market Research",
-      date: "2025-01-02",
-      topic: "Research & Analysis",
-      hashtags: ["#research", "#marketanalysis", "#business"],
-      likes: 245,
-      content: `
-        <h2>Conducting Effective Market Research</h2>
-        <p>Market research is the foundation of informed business decisions. This guide covers the methods and tools for gathering meaningful market insights.</p>
-        
-        <h3>Quantitative Research Methods</h3>
-        <p>Surveys, questionnaires, and statistical analysis provide quantitative data about market size, customer preferences, and buying behaviors.</p>
-        
-        <h3>Qualitative Research Methods</h3>
-        <p>Interviews, focus groups, and ethnographic studies provide deeper insights into customer motivations, pain points, and desires.</p>
-        
-        <h3>Competitive Analysis</h3>
-        <p>Understanding your competitors' strengths, weaknesses, and strategies is crucial for positioning your product effectively.</p>
-        
-        <h3>Data Analysis and Interpretation</h3>
-        <p>Collect data systematically and analyze it carefully to draw meaningful conclusions that inform strategy.</p>
-        
-        <p>Invest in thorough market research to reduce risk and increase your chances of success.</p>
-      `,
-    },
-    "5": {
-      title: "Business Intelligence: Turning Data into Insights",
-      date: "2024-12-28",
-      topic: "Research & Analysis",
-      hashtags: ["#businessintelligence", "#data", "#analysis"],
-      likes: 198,
-      content: `
-        <h2>Business Intelligence: Turning Data into Insights</h2>
-        <p>In today's data-driven world, the ability to transform raw data into actionable insights is a competitive advantage. Business intelligence tools and practices make this possible.</p>
-        
-        <h3>Data Collection and Integration</h3>
-        <p>Gather data from multiple sources and integrate it into a unified system. This provides a comprehensive view of your business operations.</p>
-        
-        <h3>Data Analysis and Visualization</h3>
-        <p>Use analytics tools to identify patterns, trends, and anomalies. Visualize data in ways that make insights clear and actionable.</p>
-        
-        <h3>Predictive Analytics</h3>
-        <p>Go beyond historical analysis to predict future trends and outcomes. This enables proactive decision-making.</p>
-        
-        <h3>Decision Support Systems</h3>
-        <p>Implement systems that support data-driven decision-making across your organization.</p>
-        
-        <p>Leverage business intelligence to make smarter decisions and drive business growth.</p>
-      `,
-    },
+    }   
   },
   technology: {
     "1": {
@@ -252,7 +130,7 @@ const blogContent: Record<string, Record<string, any>> = {
       date: "2025-01-16",
       topic: "Technology & AI",
       hashtags: ["#AI", "#LLM", "#technology"],
-      likes: 456,
+      likes: 4,
       content: `
         <h2>The Evolution of Large Language Models in 2025</h2>
         <p>Large Language Models have undergone remarkable evolution in recent years. As we move into 2025, we're seeing new capabilities and applications emerge that were unimaginable just a few years ago.</p>
@@ -272,81 +150,6 @@ const blogContent: Record<string, Record<string, any>> = {
         <p>The evolution of LLMs continues to reshape how we work, create, and solve problems.</p>
       `,
     },
-    "2": {
-      title: "Product Analysis: The New Wave of AI Tools",
-      date: "2025-01-11",
-      topic: "Technology & AI",
-      hashtags: ["#productanalysis", "#AI", "#innovation"],
-      likes: 389,
-      content: `
-        <h2>Product Analysis: The New Wave of AI Tools</h2>
-        <p>The AI tools market is experiencing explosive growth. New products are emerging daily, each claiming to revolutionize how we work. Let's analyze what's truly innovative.</p>
-        
-        <h3>Evaluating AI Product Quality</h3>
-        <p>Look beyond marketing hype. Evaluate products based on accuracy, reliability, ease of use, and real-world applicability.</p>
-        
-        <h3>Market Differentiation</h3>
-        <p>Successful AI products differentiate themselves through specialized capabilities, superior user experience, or unique business models.</p>
-        
-        <h3>Integration and Ecosystem</h3>
-        <p>The best AI tools integrate seamlessly with existing workflows and ecosystems. Standalone tools often fail to gain traction.</p>
-        
-        <h3>Pricing and Accessibility</h3>
-        <p>Sustainable AI products balance innovation with accessible pricing. Freemium models and flexible pricing tiers are becoming standard.</p>
-        
-        <p>When evaluating AI tools, focus on real value delivered, not just technological sophistication.</p>
-      `,
-    },
-    "3": {
-      title: "Accuracy and Ethics in AI Systems",
-      date: "2025-01-06",
-      topic: "Technology & AI",
-      hashtags: ["#AI", "#ethics", "#accuracy"],
-      likes: 334,
-      content: `
-        <h2>Accuracy and Ethics in AI Systems</h2>
-        <p>As AI systems become more prevalent in critical decision-making, accuracy and ethics are paramount. We must ensure these systems are both reliable and fair.</p>
-        
-        <h3>Measuring Accuracy</h3>
-        <p>Accuracy metrics vary depending on the application. For healthcare, accuracy might mean diagnostic precision. For hiring, it might mean predicting job performance fairly.</p>
-        
-        <h3>Bias and Fairness</h3>
-        <p>AI systems can perpetuate and amplify biases present in training data. Addressing bias requires diverse training data, careful evaluation, and ongoing monitoring.</p>
-        
-        <h3>Transparency and Explainability</h3>
-        <p>Users need to understand how AI systems make decisions. Explainable AI is crucial for building trust and accountability.</p>
-        
-        <h3>Responsible Deployment</h3>
-        <p>Organizations deploying AI must consider the broader societal impact and implement safeguards to prevent harm.</p>
-        
-        <p>Building ethical AI is not just a technical challenge—it's a moral imperative.</p>
-      `,
-    },
-    "4": {
-      title: "Market Trends: Where AI is Heading",
-      date: "2025-01-01",
-      topic: "Technology & AI",
-      hashtags: ["#AI", "#markettrends", "#research"],
-      likes: 298,
-      content: `
-        <h2>Market Trends: Where AI is Heading</h2>
-        <p>The AI market is evolving rapidly. Understanding emerging trends helps us anticipate opportunities and challenges ahead.</p>
-        
-        <h3>Specialized AI Models</h3>
-        <p>Rather than one-size-fits-all models, we're seeing specialized AI systems designed for specific domains and use cases.</p>
-        
-        <h3>Edge AI and On-Device Processing</h3>
-        <p>Moving AI processing to edge devices reduces latency and privacy concerns. This trend will accelerate as devices become more powerful.</p>
-        
-        <h3>AI-Powered Automation</h3>
-        <p>Automation powered by AI is transforming industries. From manufacturing to customer service, AI is handling increasingly complex tasks.</p>
-        
-        <h3>Regulatory Landscape</h3>
-        <p>Governments worldwide are developing AI regulations. Organizations must stay informed about compliance requirements.</p>
-        
-        <p>The future of AI is not about raw power but about intelligent, ethical, and practical applications.</p>
-      `,
-    },
   },
   culture: {
     "1": {
@@ -354,7 +157,7 @@ const blogContent: Record<string, Record<string, any>> = {
       date: "2025-01-09",
       topic: "Culture",
       hashtags: ["#history", "#women", "#culture"],
-      likes: 267,
+      likes: 2,
       content: `
         <h2>The Role of Women in Historical Narratives</h2>
         <p>Throughout history, women's contributions have often been overlooked or minimized in official narratives. It's time to reclaim these stories and recognize the profound impact women have had on civilization.</p>
@@ -378,7 +181,7 @@ const blogContent: Record<string, Record<string, any>> = {
       date: "2025-01-09",
       topic: "Geography",
       hashtags: ["#geography", "#culture", "#history"],
-      likes: 198,
+      likes: 1,
       content: `
         <h2>Geography and Culture: How Landscape Shapes Civilization</h2>
         <p>Geography is not just about maps and locations. It profoundly influences how civilizations develop, what they value, and how they interact with the world.</p>
@@ -405,7 +208,7 @@ const blogContent: Record<string, Record<string, any>> = {
       date: "2025-01-14",
       topic: "Random Thoughts",
       hashtags: ["#creativity", "#thoughts", "#expression"],
-      likes: 145,
+      likes: 1,
       content: `
         <h2>Thoughts on Creativity and Expression</h2>
         <p>Creativity is the essence of being human. It's how we make sense of the world, express ourselves, and connect with others.</p>
