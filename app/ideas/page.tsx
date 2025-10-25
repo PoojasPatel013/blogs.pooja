@@ -1,9 +1,9 @@
 "use client"
 
 import type React from "react"
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import emailjs from "@emailjs/browser"
+import emailjs from "@/lib/emailjs-config"
 
 export default function IdeasPage() {
   const [formData, setFormData] = useState({
@@ -17,13 +17,6 @@ export default function IdeasPage() {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitMessage, setSubmitMessage] = useState("")
-
-  useEffect(() => {
-    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
-    if (publicKey) {
-      emailjs.init(publicKey)
-    }
-  }, [])
 
   const topics = [
     { value: "life", label: "Life & Experiences" },
@@ -57,16 +50,8 @@ export default function IdeasPage() {
     setSubmitMessage("")
 
     try {
-      const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
       const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID
       const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID
-
-      if (!publicKey) {
-        console.log("[v0] Missing public key:", publicKey)
-        setSubmitMessage("Email service is not configured. Please contact the site administrator.")
-        setIsSubmitting(false)
-        return
-      }
 
       if (!serviceId) {
         console.log("[v0] Missing service ID:", serviceId)
