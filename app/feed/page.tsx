@@ -132,9 +132,11 @@ export default function FeedPage() {
                   {/* Post Header */}
                   <div className="flex items-start justify-between mb-4">
                     <div>
-                      <p className="text-xs font-mono text-gray-600 mb-1">
-                        {post.author.toUpperCase()} • {post.community.toUpperCase()}
-                      </p>
+                        <p className="text-xs font-mono text-gray-600 mb-1">
+                          {(post.author ?? "Unknown").toUpperCase()} • {post.community.toUpperCase()}
+                        </p>
+
+                      
                       <h3 className="text-2xl font-bold tracking-wide">{post.title}</h3>
                     </div>
                     <p className="text-xs font-mono text-gray-600 whitespace-nowrap ml-4">{post.timestamp}</p>
