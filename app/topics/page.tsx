@@ -9,28 +9,28 @@ const mainTopics = [
     name: "Life & Experiences",
     description: "Personal reflections and experiences that shape who we are.",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/life-PZ7EaVpXCuJh2qOHQwHLkeZMxSMU9x.jpg",
-    posts: 24,
+    posts: 2,
   },
   {
     slug: "spirituality",
     name: "Spirituality",
     description: "Exploring Hindu philosophy and ancient wisdom traditions.",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/spirituality-l7ORrwdI3Sfo1yzmjlhtCdnEWOB9I4.jpg",
-    posts: 19,
+    posts: 1,
   },
   {
     slug: "research",
     name: "Research & Analysis",
     description: "Product analysis, market research, and business insights.",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/research-gApktgwnTqyXT3WKbm5lYxGSC3l78g.jpg",
-    posts: 35,
+    posts: 1,
   },
   {
     slug: "technology",
     name: "Technology & AI",
     description: "AI, LLMs, product analysis, and emerging tech trends.",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/technology-jV3NuHKEtMpx4Dja6AgCaSPpyi8uYj.webp",
-    posts: 42,
+    posts: 2,
   },
 ]
 
@@ -40,14 +40,14 @@ const otherTopics = [
     name: "Culture",
     description: "Cultural exploration and heritage.",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/culture-t7vr8oZbfQ7pNmVXTDcW12UWnE5USC.jpg",
-    posts: 12,
+    posts: 1,
   },
   {
     slug: "geography",
     name: "Geography",
     description: "Geographical exploration and discoveries.",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/geography-5tqr10XcoFEY9Tt9LG4ZZr6sVQd2UG.jpg",
-    posts: 15,
+    posts: 1,
   },
   {
     slug: "random",
@@ -55,14 +55,14 @@ const otherTopics = [
     description: "Miscellaneous musings and observations.",
     image:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/random%20thoughts-PA3DFRF9f7JbK29FE49uA9j77apJpM.jpg",
-    posts: 8,
+    posts: 1,
   },
   {
     slug: "academia",
     name: "Academia",
     description: "Academic research and scholarly insights.",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/academia-oCcvZ9S4heun5HjHpoonBzDjFgcxIg.jpg",
-    posts: 11,
+    posts: 1,
   },
 ]
 
