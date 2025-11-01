@@ -3,6 +3,7 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { useParams } from "next/navigation"
+import { useState } from "react"
 
 const blogContent: Record<string, Record<string, any>> = {
   life: {
@@ -251,12 +252,78 @@ const blogContent: Record<string, Record<string, any>> = {
   },
 }
 
+const flowerStyles = `
+  @keyframes fall {
+    0% {
+      top: -50px;
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      top: 100vh;
+      opacity: 0;
+    }
+  }
+  .falling-flower {
+    position: fixed;
+    animation: fall 3s linear forwards;
+    font-size: 2rem;
+    pointer-events: none;
+    z-index: 50;
+  }
+`
+
+interface FallingFlower {
+  id: string
+  emoji: string
+  left: number
+}
+
 export default function BlogDetailPage() {
   const params = useParams()
   const topic = params?.topic as string
   const id = params?.id as string
+  const [blog, setBlog] = useState(blogContent[topic]?.[id] || null)
+  const [likes, setLikes] = useState(blog?.likes || 0)
+  const [flowers, setFlowers] = useState(0)
+  const [showFlowerMenu, setShowFlowerMenu] = useState(false)
+  const [fallingFlowers, setFallingFlowers] = useState<FallingFlower[]>([])
+  const [userLiked, setUserLiked] = useState(false)
 
-  const blog = blogContent[topic]?.[id]
+  const flowerOptions = [
+    { name: "Rose", emoji: "🌹" },
+    { name: "Sunflower", emoji: "🌻" },
+    { name: "Tulip", emoji: "🌷" },
+    { name: "Cherry Blossom", emoji: "🌸" },
+    { name: "Hibiscus", emoji: "🌺" },
+    { name: "Daisy", emoji: "🌼" },
+  ]
+
+  const handleLike = () => {
+    if (!userLiked) {
+      setLikes(likes + 1)
+      setUserLiked(true)
+    } else {
+      setLikes(likes - 1)
+      setUserLiked(false)
+    }
+  }
+
+  const handleGiftFlower = (emoji: string) => {
+    setFlowers(flowers + 1)
+    setShowFlowerMenu(false)
+
+    const flowerId = `${Date.now()}-${Math.random()}`
+    const leftPosition = Math.random() * 90
+
+    setFallingFlowers((prev) => [...prev, { id: flowerId, emoji, left: leftPosition }])
+
+    setTimeout(() => {
+      setFallingFlowers((prev) => prev.filter((f) => f.id !== flowerId))
+    }, 3000)
+  }
 
   if (!blog) {
     return (
@@ -273,6 +340,14 @@ export default function BlogDetailPage() {
 
   return (
     <div className="min-h-screen bg-white text-black font-serif">
+      <style>{flowerStyles}</style>
+
+      {fallingFlowers.map((flower) => (
+        <div key={flower.id} className="falling-flower" style={{ left: `${flower.left}%` }}>
+          {flower.emoji}
+        </div>
+      ))}
+
       {/* Header */}
       <header className="border-b-4 border-black py-8 px-6 md:px-12">
         <div className="max-w-4xl mx-auto">
@@ -290,7 +365,12 @@ export default function BlogDetailPage() {
             </div>
             <div className="text-right">
               <p className="text-sm font-mono text-gray-600">LIKES</p>
-              <p className="text-2xl font-bold">{blog.likes}</p>
+              <p className="text-2xl font-bold">{likes}</p>
+              {flowers > 0 && (
+                <p className="text-sm font-mono text-gray-600 mt-2">
+                  🌸 {flowers} FLOWER{flowers !== 1 ? "S" : ""}
+                </p>
+              )}
             </div>
           </div>
         </div>
@@ -327,15 +407,45 @@ export default function BlogDetailPage() {
 
         {/* Action Buttons */}
         <section className="border-t-2 border-black pt-8 mb-12">
-          <div className="flex gap-4">
-            <Button className="flex-1 bg-black text-white hover:bg-gray-800 font-mono text-sm py-6">
-              LIKE THIS POST
+          <div className="flex gap-4 relative">
+            <Button
+              onClick={handleLike}
+              className={`flex-1 font-mono text-sm py-6 transition-all ${
+                userLiked
+                  ? "bg-black text-white hover:bg-gray-700"
+                  : "bg-white text-black border-2 border-black hover:bg-gray-100"
+              }`}
+            >
+              {userLiked ? "✓ LIKED" : "LIKE THIS POST"}
             </Button>
-            <a href="https://buymeacoffee.com/pooja.p" target="_blank" rel="noopener noreferrer" className="flex-1">
-              <Button className="w-full bg-white text-black border-2 border-black hover:bg-gray-100 font-mono text-sm py-6">
+
+            <div className="flex-1 relative">
+              <Button
+                onClick={() => setShowFlowerMenu(!showFlowerMenu)}
+                className="w-full bg-white text-black border-2 border-black hover:bg-gray-100 font-mono text-sm py-6"
+              >
                 GIFT FLOWERS
               </Button>
-            </a>
+
+              {/* Flower selection menu */}
+              {showFlowerMenu && (
+                <div className="absolute bottom-full right-0 mb-2 bg-white border-2 border-black shadow-lg z-40">
+                  <div className="p-4 grid grid-cols-3 gap-2">
+                    {flowerOptions.map((flower) => (
+                      <button
+                        key={flower.name}
+                        onClick={() => handleGiftFlower(flower.emoji)}
+                        className="flex flex-col items-center gap-1 p-3 hover:bg-gray-100 transition-colors border border-gray-200 hover:border-black"
+                        title={flower.name}
+                      >
+                        <span className="text-2xl">{flower.emoji}</span>
+                        <span className="text-xs font-mono text-gray-600">{flower.name}</span>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
         </section>
 

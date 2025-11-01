@@ -3,6 +3,7 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { useParams } from "next/navigation"
+import { useState } from "react"
 
 const topicData: Record<string, any> = {
   life: {
@@ -50,7 +51,7 @@ const topicData: Record<string, any> = {
         date: "2025-01-17",
         hashtags: ["#academia", "#research", "#writing"],
         likes: 5,
-      }
+      },
     ],
   },
   technology: {
@@ -67,7 +68,6 @@ const topicData: Record<string, any> = {
         hashtags: ["#AI", "#LLM", "#technology"],
         likes: 4,
       },
-      
     ],
   },
   culture: {
@@ -133,10 +133,96 @@ const topicData: Record<string, any> = {
   },
 }
 
+interface PostLikes {
+  [key: number]: number
+}
+
+interface PostFlowers {
+  [key: number]: number
+}
+
+interface PostLiked {
+  [key: number]: boolean
+}
+
+const flowerStyles = `
+  @keyframes fall {
+    0% {
+      top: -50px;
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      top: 100vh;
+      opacity: 0;
+    }
+  }
+  .falling-flower {
+    position: fixed;
+    animation: fall 3s linear forwards;
+    font-size: 2rem;
+    pointer-events: none;
+    z-index: 50;
+  }
+`
+
+interface FallingFlower {
+  id: string
+  emoji: string
+  left: number
+}
+
 export default function TopicDetailPage() {
   const params = useParams()
   const slug = params?.slug as string
   const topic = topicData[slug]
+
+  const [postLikes, setPostLikes] = useState<PostLikes>(
+    topic?.posts.reduce((acc: PostLikes, post: any) => ({ ...acc, [post.id]: post.likes }), {}) || {},
+  )
+  const [postFlowers, setPostFlowers] = useState<PostFlowers>(
+    topic?.posts.reduce((acc: PostFlowers, post: any) => ({ ...acc, [post.id]: 0 }), {}) || {},
+  )
+  const [postLiked, setPostLiked] = useState<PostLiked>(
+    topic?.posts.reduce((acc: PostLiked, post: any) => ({ ...acc, [post.id]: false }), {}) || {},
+  )
+  const [showFlowerMenu, setShowFlowerMenu] = useState<number | null>(null)
+  const [fallingFlowers, setFallingFlowers] = useState<FallingFlower[]>([])
+
+  const flowerOptions = [
+    { name: "Rose", emoji: "🌹" },
+    { name: "Sunflower", emoji: "🌻" },
+    { name: "Tulip", emoji: "🌷" },
+    { name: "Cherry Blossom", emoji: "🌸" },
+    { name: "Hibiscus", emoji: "🌺" },
+    { name: "Daisy", emoji: "🌼" },
+  ]
+
+  const handleLike = (postId: number) => {
+    if (!postLiked[postId]) {
+      setPostLikes({ ...postLikes, [postId]: postLikes[postId] + 1 })
+      setPostLiked({ ...postLiked, [postId]: true })
+    } else {
+      setPostLikes({ ...postLikes, [postId]: postLikes[postId] - 1 })
+      setPostLiked({ ...postLiked, [postId]: false })
+    }
+  }
+
+  const handleGiftFlower = (postId: number, emoji: string) => {
+    setPostFlowers({ ...postFlowers, [postId]: postFlowers[postId] + 1 })
+    setShowFlowerMenu(null)
+
+    const flowerId = `${Date.now()}-${Math.random()}`
+    const leftPosition = Math.random() * 90
+
+    setFallingFlowers((prev) => [...prev, { id: flowerId, emoji, left: leftPosition }])
+
+    setTimeout(() => {
+      setFallingFlowers((prev) => prev.filter((f) => f.id !== flowerId))
+    }, 3000)
+  }
 
   if (!topic) {
     return (
@@ -153,6 +239,14 @@ export default function TopicDetailPage() {
 
   return (
     <div className="min-h-screen bg-white text-black font-serif">
+      <style>{flowerStyles}</style>
+
+      {fallingFlowers.map((flower) => (
+        <div key={flower.id} className="falling-flower" style={{ left: `${flower.left}%` }}>
+          {flower.emoji}
+        </div>
+      ))}
+
       <div className="w-full h-64 md:h-96 bg-gray-200 overflow-hidden border-b-4 border-black">
         <img src={topic.image || "/placeholder.svg"} alt={topic.name} className="w-full h-full object-cover" />
       </div>
@@ -204,31 +298,74 @@ export default function TopicDetailPage() {
                       </div>
                     </div>
 
-                    {/* Likes */}
+                    {/* Likes and Flowers */}
                     <div className="text-right ml-6">
                       <p className="text-sm font-mono text-gray-600 mb-1">LIKES</p>
-                      <p className="text-3xl font-bold">{post.likes}</p>
+                      <p className="text-3xl font-bold">{postLikes[post.id]}</p>
+                      {postFlowers[post.id] > 0 && (
+                        <p className="text-sm font-mono text-gray-600 mt-2">🌸 {postFlowers[post.id]}</p>
+                      )}
                     </div>
                   </div>
 
                   {/* Action Buttons */}
-                  <div className="border-t-2 border-black pt-4 flex gap-4">
-                    <Button className="flex-1 bg-black text-white hover:bg-gray-800 font-mono text-sm">
-                      READ MORE
-                    </Button>
-                    <Button className="flex-1 bg-white text-black border-2 border-black hover:bg-gray-100 font-mono text-sm">
-                      LIKE
-                    </Button>
-                    <a
-                      href="https://buymeacoffee.com/pooja.p"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1"
+                  <div className="border-t-2 border-black pt-4 flex gap-4 relative" onClick={(e) => e.preventDefault()}>
+                    <Link href={`/blog/${slug}/${post.id}`} className="flex-1">
+                      <Button className="w-full bg-black text-white hover:bg-gray-800 font-mono text-sm">
+                        READ MORE
+                      </Button>
+                    </Link>
+
+                    <Button
+                      onClick={(e) => {
+                        e.preventDefault()
+                        e.stopPropagation()
+                        handleLike(post.id)
+                      }}
+                      className={`flex-1 font-mono text-sm transition-all ${
+                        postLiked[post.id]
+                          ? "bg-black text-white hover:bg-gray-700"
+                          : "bg-white text-black border-2 border-black hover:bg-gray-100"
+                      }`}
                     >
-                      <Button className="w-full bg-white text-black border-2 border-black hover:bg-gray-100 font-mono text-sm">
+                      {postLiked[post.id] ? "✓ LIKED" : "LIKE"}
+                    </Button>
+
+                    <div className="flex-1 relative">
+                      <Button
+                        onClick={(e) => {
+                          e.preventDefault()
+                          e.stopPropagation()
+                          setShowFlowerMenu(showFlowerMenu === post.id ? null : post.id)
+                        }}
+                        className="w-full bg-white text-black border-2 border-black hover:bg-gray-100 font-mono text-sm"
+                      >
                         GIFT FLOWERS
                       </Button>
-                    </a>
+
+                      {/* Flower selection menu */}
+                      {showFlowerMenu === post.id && (
+                        <div className="absolute bottom-full right-0 mb-2 bg-white border-2 border-black shadow-lg z-40">
+                          <div className="p-4 grid grid-cols-3 gap-2">
+                            {flowerOptions.map((flower) => (
+                              <button
+                                key={flower.name}
+                                onClick={(e) => {
+                                  e.preventDefault()
+                                  e.stopPropagation()
+                                  handleGiftFlower(post.id, flower.emoji)
+                                }}
+                                className="flex flex-col items-center gap-1 p-3 hover:bg-gray-100 transition-colors border border-gray-200 hover:border-black"
+                                title={flower.name}
+                              >
+                                <span className="text-2xl">{flower.emoji}</span>
+                                <span className="text-xs font-mono text-gray-600">{flower.name}</span>
+                              </button>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+                    </div>
                   </div>
                 </div>
               </Link>
